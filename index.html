@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семейный Бюджет</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Ресурсы/Лого.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Ресурсы/Лого.png" alt="Логотип компании" class="logo">
+            <h1>Семейный Бюджет</h1>
+        </header>
+
+        <main>
+            <section class="family-members">
+                <h2>Члены семьи</h2>
+                <a href="edit-member.html" class="add-member-btn">Добавить члена семьи</a>
+                <div id="familyMembersList" class="members-list">
+                </div>
+            </section>
+
+            <section class="budget-status">
+                <h2>Статус бюджета</h2>
+                <div id="budgetStatus" class="status-container">
+                </div>
+            </section>
+
+            <section class="transactions">
+                <h2>Транзакции</h2>
+                <div class="transaction-form">
+                    <h3>Добавить транзакцию</h3>
+                    <form id="transactionForm">
+                        <div class="form-group">
+                            <label for="amount">Сумма:</label>
+                            <input type="number" id="amount" name="amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Категория:</label>
+                            <select id="category" name="category" required>
+                                <option value="food">Питание</option>
+                                <option value="housing">Жилищные расходы</option>
+                                <option value="transport">Транспорт</option>
+                                <option value="utilities">Коммунальные услуги</option>
+                                <option value="other">Прочее</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Дата:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Тип:</label>
+                            <select id="type" name="type" required>
+                                <option value="income">Доход</option>
+                                <option value="expense">Расход</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Добавить</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
